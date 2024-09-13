@@ -3,7 +3,7 @@
 // 1. Below is a class called "Person". Your task is to convert this class into a constructor function with methods defined on its prototype.
 // 2. Ensure the functionality remains the same after converting.
 
-
+/*
 class Person {
   constructor(firstName, lastName) {
     this.firstName = firstName;
@@ -17,6 +17,20 @@ class Person {
   greet() {
     console.log(`Hello, my name is ${this.getFullName()}.`);
   }
+}
+*/
+
+function Person(firstName, lastName) {
+  this._firstName = firstName
+  this._lastName = lastName
+}
+
+Person.prototype.getFullName = function() {
+  return `${this._firstName} ${this._lastName}`;
+}
+
+Person.prototype.greet = function() {
+  console.log(`Hello, my name is ${this.getFullName()}.`);
 }
 
 
